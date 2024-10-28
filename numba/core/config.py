@@ -414,9 +414,9 @@ class _EnvReloader(object):
 
         # if set and SVML is available, it will be disabled
         # By default, it's disabled on 32-bit platforms.
-        DISABLE_INTEL_SVML = _readenv(
-            "NUMBA_DISABLE_INTEL_SVML", int, IS_32BITS)
-
+        DISABLE_INTEL_SVML = True # _readenv(
+            # "NUMBA_DISABLE_INTEL_SVML", int, IS_32BITS)
+        print("DJOID Config: SVML is disabled")
         # Disable jit for debugging
         DISABLE_JIT = _readenv("NUMBA_DISABLE_JIT", int, 0)
 
